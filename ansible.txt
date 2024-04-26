@@ -16,5 +16,4 @@ server2 ansible_host=192.168.1.11
 4.Save both files to your Git repository.
 5.Run the Ansible playbook with the path to the inventory file:
 ansible-playbook -i inventory.ini pingpong.yml
-6.Ansible почне виконувати плейбук і пропінгує вказані вами хости.
-
+6.Ansible will start the playbook and ping the hosts you specified.
