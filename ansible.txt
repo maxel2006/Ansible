@@ -1,0 +1,20 @@
+1.A step-by-step guide to deploying Ansible
+Install Ansible on your server or computer. To do this, execute the command:
+sudo apt update
+sudo apt install ansible
+2.Prepare an inventory.ini file where you specify your target hosts. Example:
+[servers]
+server1 ansible_host=192.168.1.10
+server2 ansible_host=192.168.1.11
+3.Create an Ansible playbook. For example, pingpong.yml:
+---
+- name: Ping hosts
+  hosts: servers
+  tasks:
+    - name: Ping each host
+      ping:
+4.Save both files to your Git repository.
+5.Run the Ansible playbook with the path to the inventory file:
+ansible-playbook -i inventory.ini pingpong.yml
+6.Ansible почне виконувати плейбук і пропінгує вказані вами хости.
+
